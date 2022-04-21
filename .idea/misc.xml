@@ -21,17 +21,21 @@
         <entry key="app/src/main/res/layout-v28/activity_login_screen.xml" value="0.19630192502532928" />
         <entry key="app/src/main/res/layout-w1240dp/activity_login_screen.xml" value="0.24933065595716197" />
         <entry key="app/src/main/res/layout-w936dp/activity_login_screen.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/activity_food.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/activity_information_form.xml" value="0.20689655172413793" />
+        <entry key="app/src/main/res/layout/activity_item_diplay.xml" value="0.24320652173913043" />
         <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.2012779552715655" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.2605891188530073" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.2279998779296875" />
         <entry key="app/src/main/res/layout/drop_down_college_year.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/food_activity.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tasks.xml" value="0.16225433349609375" />
+        <entry key="app/src/main/res/layout/item_food.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_task.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.23642578125000002" />
       </map>

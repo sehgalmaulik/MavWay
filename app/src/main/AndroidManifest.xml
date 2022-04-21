@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mavway1">
         <activity
+            android:name=".activities.Item_display_activity"
+            android:exported="false" />
+        <activity
             android:name=".activities.InformationForm"
             android:exported="false" />
         <activity
