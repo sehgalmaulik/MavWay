@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:labelVisibilityMode="labeled"
+    app:startDestination="@id/homeFragement">
+
+    <fragment
+        android:id="@+id/homeFragement"
+        android:name="com.project.mavway1.activities.Fragments.HomeFragment"
+        android:label="fragment_home_fragement"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.project.mavway1.activities.Fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.project.mavway1.activities.Fragments.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.project.mavway1.activities.Fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
