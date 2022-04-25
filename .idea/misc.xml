@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../../../layout/custom_preview.xml" value="0.38055555555555554" />
+        <entry key="app/src/main/res/drawable-v24/ic_baseline_edit_24.xml" value="0.1655" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_search_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_baseline_settings_24.xml" value="0.3085" />
         <entry key="app/src/main/res/drawable-v24/ic_home.xml" value="0.1" />
@@ -28,22 +29,25 @@
         <entry key="app/src/main/res/layout-w936dp/activity_login_screen.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_course.xml" value="0.34671783447265625" />
         <entry key="app/src/main/res/layout/activity_edit_class.xml" value="0.3249984741210938" />
+        <entry key="app/src/main/res/layout/activity_edit_profile_page.xml" value="0.3220108695652174" />
         <entry key="app/src/main/res/layout/activity_food.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/activity_forgot_password_popup.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/activity_information_form.xml" value="0.20689655172413793" />
         <entry key="app/src/main/res/layout/activity_item_diplay.xml" value="0.24320652173913043" />
+        <entry key="app/src/main/res/layout/activity_item_info.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login_screen.xml" value="0.42291949579890925" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.2605891188530073" />
+        <entry key="app/src/main/res/layout/activity_settings_page.xml" value="0.3220108695652174" />
         <entry key="app/src/main/res/layout/activity_start_screen.xml" value="0.3406585693359375" />
-        <entry key="app/src/main/res/layout/add_class_dialog.xml" value="0.36821899414062503" />
+        <entry key="app/src/main/res/layout/add_class_dialog.xml" value="0.14585571289062502" />
         <entry key="app/src/main/res/layout/drop_down_college_year.xml" value="0.2" />
         <entry key="app/src/main/res/layout/food_activity.xml" value="0.26875" />
         <entry key="app/src/main/res/layout/forgot_pass_dialogue.xml" value="0.2821557971014493" />
         <entry key="app/src/main/res/layout/fragment_blank.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33636363636363636" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.4164581298828125" />
         <entry key="app/src/main/res/layout/fragment_tasks.xml" value="0.16225433349609375" />
         <entry key="app/src/main/res/layout/item_class_list.xml" value="0.39015496295431384" />
         <entry key="app/src/main/res/layout/item_food.xml" value="0.22" />

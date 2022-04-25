@@ -10,4 +10,3 @@ data class UserCourses  (
     val professor: String ?= "",
     val location: String ?= "",
 ): Serializable
-

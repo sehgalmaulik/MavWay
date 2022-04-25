@@ -3,11 +3,14 @@ package com.project.mavway1.firebase
 import android.util.Log
 import android.widget.Toast
 import androidx.constraintlayout.helper.widget.MotionEffect.TAG
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import com.project.mavway1.activities.EditClassActivity
 import com.project.mavway1.activities.InformationForm
@@ -15,8 +18,14 @@ import com.project.mavway1.activities.RegisterUser
 import com.project.mavway1.models.User
 import com.project.mavway1.models.UserCourses
 import com.project.mavway1.utils.Constants
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 
-class FireStoreClass {
+
+class FireStoreClass() {
+    private lateinit var mUser: User
     private val db = Firebase.firestore
     private val classCollection = db.collection(Constants.USERS)
     fun registerUser(activity: RegisterUser, userinfo: User?)
@@ -68,21 +77,27 @@ class FireStoreClass {
     }
 
 //    fun updateClasses(activity: HomeDialogue , userHashMap: HashMap<String, ArrayList<String>>)
-    fun updateClasses(classCode: String, classNum: String, time: String, day: String)
+    fun updateClasses(classCode: String, classNum: String, time: String, day: String, prof: String, location: String)
     {
-
-
-//        db.collection(Constants.CLASSES).document(getCurrentUserId()!!).update(userHashMap as Map<String, Any>).addOnSuccessListener {
-//                    Log.i(activity.javaClass.simpleName,"Successfully updated user details")
-//                }
-//                .addOnFailureListener { e ->
-//                    Log.w(TAG, "Error adding document", e)
-//                }
-        val userClasses = UserCourses(classCode, classNum, time, day)
+        val userClasses = UserCourses(classCode, classNum, time, day, prof, location)
         classCollection.document(getCurrentUserId()!!).collection(Constants.CLASSES).document("$classCode-$classNum").set(userClasses)
     }
 
-    private fun getCurrentUserId(): String? {
+    fun getUser(): Task<DocumentSnapshot>
+    {
+        return classCollection.document(getCurrentUserId()!!).get()
+    }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    fun updateUser(user: User)
+    {
+        GlobalScope.launch {
+            classCollection.document(getCurrentUserId()!!).set(user).await()
+        }
+
+    }
+
+    fun getCurrentUserId(): String? {
         return Firebase.auth.currentUser?.uid
     }
 
@@ -90,6 +105,8 @@ class FireStoreClass {
 
 
 }
+
+
 
 
 

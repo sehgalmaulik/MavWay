@@ -77,6 +77,7 @@ class HomeFragment : Fragment(), OnCourseClick{
             name.text = userObj.name
             collegeYear.text = userObj.collegeYear
             major.text = userObj.major
+
         }
 
         addbutton.setOnClickListener{
@@ -95,7 +96,7 @@ class HomeFragment : Fragment(), OnCourseClick{
         return view
     }
 
-    private fun eventChangeListener(){
+     fun eventChangeListener(){
         db = FirebaseFirestore.getInstance()
         Firebase.auth.currentUser?.let {
             db.collection(Constants.USERS).document(it.uid).collection(Constants.CLASSES).addSnapshotListener(object : EventListener<QuerySnapshot>{
@@ -109,9 +110,11 @@ class HomeFragment : Fragment(), OnCourseClick{
                     {
                         if(dc.type == DocumentChange.Type.ADDED){
                             classesArrayList.add(dc.document.toObject(UserCourses::class.java))
+//                            refreshFragment()
                         }
                     }
                     adapter.notifyDataSetChanged()
+//                    eventChangeListener()
                 }
             })
 
@@ -120,30 +123,10 @@ class HomeFragment : Fragment(), OnCourseClick{
 
     }
 
-//    private fun getData() {
-//        db = FirebaseFirestore.getInstance()
-//
-//        val docRef = db.collection(Constants.USERS).document(Firebase.auth.currentUser?.uid.toString())
-//        docRef.get().addOnSuccessListener { document ->
-//            if (document != null) {
-//                //store the data
-//                userObj = User(name = document.data!![Constants.NAME].toString(), collegeYear = document.data!![Constants.YEAR].toString(), major = document.data!![Constants.MAJOR].toString())
-//                return@addOnSuccessListener
-//            } else {
-//                Log.d("TAG", "No such document")
-//            }
-//
-//        }
-//
-//    }
 
     private fun openDialog() {
         val exampleDialog = HomeDialogue()
         exampleDialog.show(parentFragmentManager, "example dialog")
-
-
-
-
     }
 
 
@@ -168,12 +151,23 @@ class HomeFragment : Fragment(), OnCourseClick{
     }
 
     override fun onItemClick(course: UserCourses) {
-//        val name = course.course
-//        val code = course.courseCode
-//        Toast.makeText(activity, "Clicked + ${course.course} + $code", Toast.LENGTH_SHORT).show()
         val intent = Intent(activity, CourseActivity::class.java)
         intent.putExtra("courseobj", course)
         startActivity(intent)
     }
+
+
+
+    //write a function to refresh the fragment
+
+    //function to reload the data of the fragment
+//    fun reloadData(){
+//        classesArrayList.clear()
+//        adapter.notifyDataSetChanged()
+//        eventChangeListener()
+//    }
+
+
+
 }
 
