@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Mav Way</string>
+    <string name="mav_way">Mav Way</string>
+    <string name="description">Navigate UTA the smart way. An app to help you better navigate on campus and keep on top.</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign in</string>
+    <string name="starting_image_description">starting image description</string>
+    <string name="title_activity_login_screen">LoginScreen</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="lets_sign_you_in">Lets Sign you in</string>
+    <string name="message">Welcome Back,\nYou have been missed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="let_s_get_you_started">Let\'s Get You Started</string>
+    <string name="food_button">Food</string>
+    <string name="printing_button">Printing</string>
+    <string name="vending_button">Vending</string>
+    <string name="helpdesk_button">HelpDesk</string>
+    <string name="buildings_button">Buildings</string>
+    <string name="maps_button">Maps</string>
+    <string-array name="college_year">
+        <item>Freshman</item>
+        <item>Sophomore</item>
+        <item>Junior</item>
+        <item>Senior</item>
+    </string-array>
+    <string-array name="major_list">
+        <item>Computer Science</item>
+        <item>Business</item>
+        <item>Sociology</item>
+        <item>Accounting</item>
+        <item>Biomedical</item>
+        <item>Philosophy</item>
+        <item>Criminal Justice</item>
+        <item>Information Security</item>
+    </string-array>
+</resources>
