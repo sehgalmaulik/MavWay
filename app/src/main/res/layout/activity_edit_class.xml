@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.EditClassActivity"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:paddingTop="30dp"
+        android:background="@color/ogblue"
+        app:flow_verticalBias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/classname"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+
+        android:text="Class Name"
+        android:hint="Class Name"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:maxLines="1"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/classcode"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Class Code"
+        app:layout_constraintTop_toBottomOf="@id/classname"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:maxLines="1"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:id="@+id/timings"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Timings"
+        app:layout_constraintTop_toBottomOf="@id/classcode"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:maxLines="1"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/days"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Days"
+        app:layout_constraintTop_toBottomOf="@id/timings"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:maxLines="1"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/professor"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Professor"
+        app:layout_constraintTop_toBottomOf="@id/days"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:maxLines="1"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/location"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:text="Location"
+        app:layout_constraintTop_toBottomOf="@id/professor"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:background="@drawable/background_each_course"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:maxLines="2"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/submitbutton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@+id/location"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        android:layout_marginTop="30dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginEnd="40dp"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="40dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/outfit"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@+id/submitbutton"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginEnd="40dp"
+        android:stateListAnimator="@null"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/outfit"
+        android:backgroundTint="@color/signout_red"
+        android:textColor="@color/white"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

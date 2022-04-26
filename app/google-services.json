@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "667069293550",
+    "project_id": "mav-way",
+    "storage_bucket": "mav-way.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667069293550:android:5221184972b75ac3abe4ff",
+        "android_client_info": {
+          "package_name": "com.mavway.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667069293550-hm40vme5uvu6rofsmr7q6ru6iplmvfs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6VvO37PRaiNTiXPiMWeNHomnvWUTy-cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667069293550-hm40vme5uvu6rofsmr7q6ru6iplmvfs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667069293550:android:b5dfc65259828f17abe4ff",
+        "android_client_info": {
+          "package_name": "com.project.mavway1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667069293550-hm40vme5uvu6rofsmr7q6ru6iplmvfs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6VvO37PRaiNTiXPiMWeNHomnvWUTy-cM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667069293550-hm40vme5uvu6rofsmr7q6ru6iplmvfs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
