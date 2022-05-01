@@ -38,6 +38,42 @@
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/title_form" />
 
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview_profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="50dp"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintTop_toBottomOf="@+id/view_form"
+                    android:layout_marginTop="20dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="3dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:padding="15dp">
+                        <ImageView
+                            android:id="@+id/profile_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_baseline_person_24"
+                            android:scaleType="centerCrop"
+                            />
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageButton
+                    android:id="@+id/edit_profile_photo"
+                    android:layout_width="30dp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintLeft_toRightOf="@+id/cardview_profile"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_form"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/enterName"
@@ -57,7 +93,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view_form"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview_profile"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
                 <androidx.appcompat.widget.AppCompatEditText
@@ -164,7 +200,7 @@
                     app:layout_constraintHorizontal_bias="0.078"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/view_form" />
+                    app:layout_constraintTop_toBottomOf="@id/cardview_profile" />
 
                 <TextView
                     android:id="@+id/phoneText"

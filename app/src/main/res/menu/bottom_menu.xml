@@ -12,10 +12,10 @@
         />
     <item
         android:id="@+id/searchFragment"
-        android:title="Search"
+        android:title="Explore"
         android:state_focused="true"
         android:color="@color/pp"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@drawable/ic_baseline_explore_24"
         />
     <item
         android:id="@+id/tasksFragment"

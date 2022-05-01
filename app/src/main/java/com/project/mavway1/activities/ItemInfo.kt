@@ -24,7 +24,7 @@ class ItemInfo : AppCompatActivity() {
         val location = findViewById<TextView>(R.id.item_location)
         val image = findViewById<ImageView>(R.id.item_image)
 
-        val navigate_bt = findViewById<ImageButton>(R.id.item_button)
+        val navigate_bt = findViewById<Button>(R.id.item_button)
 
         title.text = item.name
         desc.text = item.description

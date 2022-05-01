@@ -64,7 +64,7 @@ class Item_display_activity : AppCompatActivity(), numItemClicked {
     }
 
     override fun OnItemClicked(item: Item) {
-        Toast.makeText(this,"Clicked : Item ${item.name}", Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,"Clicked : Item ${item.name}", Toast.LENGTH_LONG).show()
 
         val intent = Intent(this, ItemInfo::class.java)
         intent.putExtra("item_selected",item)

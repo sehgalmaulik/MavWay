@@ -2,15 +2,25 @@ package com.project.mavway1.activities
 
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.project.mavway1.R
 import com.project.mavway1.R.*
 import com.project.mavway1.activities.Fragments.MainActivity
 import com.project.mavway1.firebase.FireStoreClass
 import com.project.mavway1.models.User
 import com.project.mavway1.utils.Constants
+import java.io.File
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -18,6 +28,10 @@ import kotlin.collections.HashMap
 class InformationForm : AppCompatActivity() {
 
     private lateinit var mUserDetails: User
+    private lateinit var imageUri: Uri
+    val database = Firebase.database.reference
+    val uid = FireStoreClass().getCurrentUserId()
+    var photoselectedflag = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +45,9 @@ class InformationForm : AppCompatActivity() {
         val dob_month = cal.get(Calendar.MONTH)
         val dob_date =cal.get(Calendar.DAY_OF_MONTH)
 
+        val profile_picture = findViewById<ImageView>(R.id.profile_photo)
+        val edit_photo = findViewById<ImageButton>(R.id.edit_profile_photo)
+
         dobPicker.setOnClickListener{
 
             val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { datePicker, year, month, dayOfMonth ->
@@ -41,12 +58,37 @@ class InformationForm : AppCompatActivity() {
             },dob_year,dob_month,dob_date)
             dpd.show()
         }
+        val getImage = registerForActivityResult(
+            ActivityResultContracts.GetContent(),
+            ActivityResultCallback {
+                profile_picture.setImageURI(it)
+                if (it != null) {
+                    imageUri = it
+                }
+            }
+        )
+        edit_photo.setOnClickListener{
+
+            getImage.launch("image/*")
+            photoselectedflag = 1
+        }
 
         // code for submitting user details
         val submitFormButton = findViewById<View>(id.button) as Button
         submitFormButton.setOnClickListener {
             UpdateUserDetails()
         }
+        val storageRef = uid?.let { FirebaseStorage.getInstance().reference.child(it) }
+        val localfile : File = File.createTempFile("tempfile",".jpg")
+
+        storageRef?.getFile(localfile)?.addOnSuccessListener {
+            val bitmap: Bitmap = BitmapFactory.decodeFile(localfile.absolutePath)
+            //val rotatedBitmap = bitmap.rotate(90f)
+
+            profile_picture.setImageBitmap(bitmap)
+        }
+
+
     }
 
 
@@ -77,6 +119,11 @@ class InformationForm : AppCompatActivity() {
             userHashMap[Constants.DOB] = DOB
             FireStoreClass().updateUserDetails(this, userHashMap)
 
+        if(photoselectedflag == 1)
+        {
+            uploadImage()
+        }
+
     }
 
     //to be implemented
@@ -84,5 +131,25 @@ class InformationForm : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+
+    private fun uploadImage() {
+
+        //get uid and set it to this variable
+        val uid = FireStoreClass().getCurrentUserId()
+
+        var imageurl : String
+
+        val storageRef = uid?.let { FirebaseStorage.getInstance().reference.child(it) }
+
+        if (storageRef != null) {
+            storageRef.putFile(imageUri).addOnSuccessListener {
+                Toast.makeText(this,"Profile Photo uploaded",Toast.LENGTH_LONG).show()
+
+            }.addOnFailureListener{
+                Toast.makeText(this,"Profile Photo not uploaded",Toast.LENGTH_LONG).show()
+            }
+        }
+
     }
 }
