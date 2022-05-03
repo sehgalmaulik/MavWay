@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_heading_class_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Days"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox_mon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heading_class_days"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBox_tue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_mon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_wed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_tue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_thurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_wed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"/>
+    <CheckBox
+        android:id="@+id/checkBox_fri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_thurs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"/>
+
+    
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
