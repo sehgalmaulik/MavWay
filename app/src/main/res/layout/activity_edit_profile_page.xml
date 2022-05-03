@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollable">
+
+        <!--    <-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:padding="0dp"-->
+        <!--        tools:context=".activities.InformationForm">-->
+
+        <TextView
+            android:id="@+id/title_form"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/outfit"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/view_form"
+            android:layout_width="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="#D7DEDD"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_form" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/enterName"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:autofillHints="Name"
+            android:background="@drawable/consist_text_input_box"
+            android:fontFamily="@font/outfit"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_profile"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/enterPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/consist_text_input_box"
+            android:fontFamily="@font/outfit"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterName"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/enterDOB"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:autofillHints="MM/DD/YYYY"
+            android:background="@drawable/consist_text_input_box"
+            android:fontFamily="@font/outfit"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterPhoneNumber"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/spCollegeYear"
+            android:layout_width="match_parent"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:entries="@array/college_year"
+            android:autofillHints="College Year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterDOB"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Spinner
+            android:id="@+id/spMajor"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:autofillHints="Major"
+            android:entries="@array/major_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spCollegeYear"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/enterMinor"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/consist_text_input_box"
+            android:fontFamily="@font/outfit"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spMajor"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/outfit"
+            android:text="@string/name"
+            android:textSize="11sp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/enterName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview_profile" />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/outfit"
+            android:text="@string/phone_number"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterPhoneNumber"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/dobText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/outfit"
+            android:layout_marginStart="30dp"
+            android:text="@string/date_of_birth"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterDOB"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterPhoneNumber"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/collegeYearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/outfit"
+            android:text="@string/college_year"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterMinor"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterDOB"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/majorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/outfit"
+            android:text="@string/major"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/spMajor"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spCollegeYear"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/minorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/outfit"
+            android:text="@string/minor"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterMinor"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spMajor"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/enterMinor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/black"
+            android:text="cancel"
+            android:fontFamily="@font/outfit"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/profile_guideline"
+            android:textSize="11sp"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/enterMinor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/ogblue"
+            android:text="submit"
+            android:fontFamily="@font/outfit"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/profile_guideline"
+            android:textSize="11sp"/>
+
+        <ImageButton
+            android:id="@+id/edit_profile_photo"
+            android:layout_width="30dp"
+            android:layout_height="30sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:backgroundTint="@color/white"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toRightOf="@+id/cardview_profile"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_form"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/profile_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"
+
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardview_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/view_form"
+
+            app:strokeColor="@color/white"
+            app:strokeWidth="3dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="15dp">
+            <ImageView
+                android:id="@+id/profile_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_person_24"
+                android:scaleType="centerCrop"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
