@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ogblue"
+        tools:context=".activities.CourseActivity">
+
+        <view
+            android:id="@+id/view"
+            class="com.google.android.material.textview.MaterialTextView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/view_home"
+            android:paddingStart="15dp"
+            app:layout_constraintVertical_bias="0"
+            android:paddingEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="70dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="@font/outfit"
+            android:text="Class Details"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintVertical_bias="1"
+            android:layout_marginBottom="50dp"
+            />
+
+        <TextView
+            android:id="@+id/classname"
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="@id/view"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:maxLines="1"
+            android:elevation="70dp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/outfit"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/timings"
+            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/classname"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/consist_text_input_box"
+            android:elevation="70dp"
+            android:layout_marginEnd="40dp"
+            android:maxLines="1"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/outfit"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/timings"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            android:maxLines="1"
+            android:elevation="70dp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/outfit"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/professor"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            android:elevation="70dp"
+            app:layout_constraintTop_toBottomOf="@id/days"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            android:maxLines="1"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/outfit"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            android:elevation="70dp"
+            app:layout_constraintTop_toBottomOf="@id/professor"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/consist_text_input_box"
+            android:layout_marginEnd="40dp"
+            android:maxLines="2"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/outfit"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Name"
+            android:fontFamily="@font/outfit"
+            android:textColor="#8E8383"
+            android:elevation="70dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/classname"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="4dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timings"
+            android:fontFamily="@font/outfit"
+            android:textColor="#8E8383"
+            android:elevation="70dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/timings"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:fontFamily="@font/outfit"
+            android:textColor="#8E8383"
+            android:elevation="70dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/days"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Professor"
+            android:fontFamily="@font/outfit"
+            android:textColor="#8E8383"
+            android:elevation="70dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/professor"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:fontFamily="@font/outfit"
+            android:textColor="#8E8383"
+            android:elevation="70dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/location"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="42dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+        <Button
+            android:id="@+id/editbutton"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Edit"
+            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            android:layout_marginTop="50dp"
+            android:elevation="70dp"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginEnd="40dp"
+            android:stateListAnimator="@null"
+            android:layout_marginStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/outfit"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/deletebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            app:layout_constraintTop_toBottomOf="@+id/editbutton"
+            app:layout_constraintLeft_toLeftOf="@+id/view"
+            app:layout_constraintRight_toRightOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            android:layout_marginTop="10dp"
+            android:elevation="70dp"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:stateListAnimator="@null"
+            android:layout_marginStart="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:fontFamily="@font/outfit"
+            android:backgroundTint="@color/signout_red"
+            android:textColor="@color/white"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
