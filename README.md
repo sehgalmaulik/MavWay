@@ -1,3 +1,5 @@
+
+
 MavWay is an Android application designed to help University of Texas at Arlington (UTA) students and administrators easily navigate the campus and manage their daily schedules. The app provides various features, such as searching for campus buildings, student services, and nearby food places, as well as managing class schedules and to-do tasks.
 
 Table of Contents
@@ -35,3 +37,8 @@ OpenWeather API
 
 
 
+## Copyright 
+
+Copyright © 2023. All rights reserved.
+
+This software is provided for educational purposes only. It is prohibited to use this code, for any college assignment or personal use. Unauthorized distribution, modification or commercial usage is strictly forbidden. Please respect the rights of the author.
