@@ -29,6 +29,87 @@ Edit your profile and settings as needed.
 - Glide Image Rendering Library
 
 
+## Demo
+
+### Splash Screen
+
+<p float="left">
+  <img src="/ss/splashscreen.png" width="200" />
+</p>
+
+### Register and Login
+
+<p float="left">
+  <img src="/ss/registerscreen.png" width="200" />
+  <img src="/ss/signinscreen.png" width="200" />
+</p>
+
+### Onboarding
+<p float = "left">
+  <img src="/ss/registrationonboarding.png" width="200" /> 
+  <img src="/ss/dob_registration.png" width="200" />
+  <img src="/ss/scroller_registration.png" width="200" />
+</p>
+### Home Page
+
+<p float="left">
+  <img src="/ss/homepage.png" width="200" />
+</p>
+
+### Explore 
+
+<p float="left">
+  <img src="/ss/explore1.png" width="200" />
+  <img src="/ss/explore2.png" width="200" />
+</p>
+
+### Tasks 
+
+<p float="right">
+<!--   <img src="/ss/taskspage.png" width="200" /> -->
+  <img src="/ss/addtask.png" width="200" />
+  <img src="/ss/taskadded.png" width="200" />
+</p>
+
+### Profile 
+
+<p float="left">
+  <img src="/ss/profilepage.png" width="200" />
+  <img src="/ss/editprofile.png" width="200" />
+  <img src="/ss/signoutedit.png" width="200" />
+</p>
+
+### Categories and Info
+
+<p float="left">
+  <img src="/ss/buildingcategory.png" width="200" />
+  <img src="/ss/buildingcategoryinfo.png" width="200" />
+  <img src="/ss/foodcategory.png" width="200" />
+  <img src="/ss/foodcategoryinfo.png" width="200" />
+  <img src="/ss/helpdeskcategory.png" width="200" />
+  <img src="/ss/helpdeskcategoryinfo.png" width="200" />
+  <img src="/ss/mapscategory.png" width="200" />
+  <img src="/ss/printingcategory.png" width="200" />
+  <img src="/ss/printingcategoryinfo.png" width="200" />
+  <img src="/ss/vendingcategory.png" width="200" />
+  <img src="/ss/vendingcategoryinfo.png" width="200" />
+</p>
+
+### Other Screens
+
+<p float="left">
+  <img src="/ss/carbon.png" width="200" />
+  <img src="/ss/class_add_days.png" width="200" />
+  <img src="/ss/class_add_details.png" width="200" />
+  <img src="/ss/class_add_time.png" width="200" />
+  <img src="/ss/classdetails.png" width="200" />
+  <img src="/ss/editclassdetails.png" width="200" />
+  <img src="/ss/googlemaps.png" width="200" />
+  <img src="/ss/startscreen.png" width="200" />
+</p>
+
+
+
 
 ## Copyright 
 
