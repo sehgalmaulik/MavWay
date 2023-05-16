@@ -31,10 +31,12 @@ Edit your profile and settings as needed.
 
 ## Demo
 
-### Splash Screen
+### Splash Screen & Welcome 
 
 <p float="left">
   <img src="/ss/splashscreen.png" width="200" />
+  <img src="/ss/startscreen.png" width="200" />
+  
 </p>
 
 ### Register and Login
@@ -50,30 +52,19 @@ Edit your profile and settings as needed.
   <img src="/ss/dob_registration.png" width="200" />
   <img src="/ss/scroller_registration.png" width="200" />
 </p>
+
 ### Home Page
 
 <p float="left">
   <img src="/ss/homepage.png" width="200" />
-</p>
 
-### Explore 
-
-<p float="left">
   <img src="/ss/explore1.png" width="200" />
   <img src="/ss/explore2.png" width="200" />
-</p>
 
-### Tasks 
-
-<p float="right">
 <!--   <img src="/ss/taskspage.png" width="200" /> -->
   <img src="/ss/addtask.png" width="200" />
   <img src="/ss/taskadded.png" width="200" />
-</p>
 
-### Profile 
-
-<p float="left">
   <img src="/ss/profilepage.png" width="200" />
   <img src="/ss/editprofile.png" width="200" />
   <img src="/ss/signoutedit.png" width="200" />
@@ -98,14 +89,12 @@ Edit your profile and settings as needed.
 ### Other Screens
 
 <p float="left">
-  <img src="/ss/carbon.png" width="200" />
   <img src="/ss/class_add_days.png" width="200" />
   <img src="/ss/class_add_details.png" width="200" />
   <img src="/ss/class_add_time.png" width="200" />
   <img src="/ss/classdetails.png" width="200" />
   <img src="/ss/editclassdetails.png" width="200" />
   <img src="/ss/googlemaps.png" width="200" />
-  <img src="/ss/startscreen.png" width="200" />
 </p>
 
 
